@@ -28,7 +28,7 @@ public class DemoController {
 			produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ResponseEntity<?> check(@RequestParam String id) 
     		throws UnsupportedEncodingException, JsonProcessingException, KeyManagementException, NoSuchAlgorithmException {		
-		if (id.equalsTo("pass")) {			
+		if (id.equals("pass")) {			
 			return ResponseEntity.accepted().build();
 		}
 		else {
